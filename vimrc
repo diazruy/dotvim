@@ -23,7 +23,7 @@ set shiftwidth=2	" Set tab width to 2
 set tabstop=2			" Set tab width to 2
 set expandtab			" Insert tabs as spaces
 
-" colorscheme molokai
+colorscheme molokai
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
