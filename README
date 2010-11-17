@@ -11,3 +11,8 @@ Switch to the ~/.vim directory and fetch submodules
 	cd ~/.vim
 	git submodule init
 	git sumbodule update
+
+Compile command-t
+
+  cd bundle/command-t
+  rake make
