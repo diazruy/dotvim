@@ -22,6 +22,7 @@ set softtabstop=2 " Set tab width to 2
 set shiftwidth=2	" Set tab width to 2
 set tabstop=2			" Set tab width to 2
 set expandtab			" Insert tabs as spaces
+set nowrap        " Disable text wrapping
 
 colorscheme molokai
 
