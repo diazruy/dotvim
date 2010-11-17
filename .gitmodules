@@ -13,3 +13,6 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
+[submodule "snippets"]
+	path = snippets
+	url = https://github.com/scrooloose/snipmate-snippets.git
