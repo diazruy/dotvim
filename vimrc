@@ -23,12 +23,15 @@ set shiftwidth=2	" Set tab width to 2
 set tabstop=2			" Set tab width to 2
 set expandtab			" Insert tabs as spaces
 set nowrap        " Disable text wrapping
+set wildignore=.git,*.cache,*.gif,*.png,*.jpg " Ignore these file from listings
 
 colorscheme molokai
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
+
+nmap <silent> <C-T> :NERDTreeToggle<CR>
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
