@@ -14,15 +14,16 @@ else
   set backup		" keep a backup file
 endif
 set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
+set ruler					" show the cursor position all the time
+set showcmd				" display incomplete commands
+set incsearch			" do incremental searching
+set number				" show line numbers
+set softtabstop=2 " Set tab width to 2
+set shiftwidth=2	" Set tab width to 2
+set tabstop=2			" Set tab width to 2
+set expandtab			" Insert tabs as spaces
 
-" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
-" let &guioptions = substitute(&guioptions, "t", "", "g")
-
-" Don't use Ex mode, use Q for formatting
-map Q gq
+" colorscheme molokai
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
