@@ -16,3 +16,9 @@
 [submodule "snippets"]
 	path = snippets
 	url = https://github.com/scrooloose/snipmate-snippets.git
+[submodule "bundle/unimpaired"]
+	path = bundle/unimpaired
+	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "pathogen"]
+	path = pathogen
+	url = git://github.com/tpope/vim-pathogen.git
