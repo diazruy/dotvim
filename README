@@ -16,3 +16,11 @@ Compile command-t
 
   cd bundle/command-t
   rake make
+
+For the molokai color scheme
+
+  sudo apt-get install ncurses-term
+
+  Add to .bashrc:
+    
+    export TERM=xterm-256color

@@ -8,11 +8,8 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-else
-  set backup		" keep a backup file
-endif
+set nobackup		" do not keep a backup file, use versions instead
+set noswapfile
 set history=50		" keep 50 lines of command line history
 set ruler					" show the cursor position all the time
 set showcmd				" display incomplete commands
@@ -32,6 +29,15 @@ colorscheme molokai
 inoremap <C-U> <C-G>u<C-U>
 
 nmap <silent> <C-T> :NERDTreeToggle<CR>
+
+" Navigate splits without having to prepend with C-w
+map <C-h> <C-w>h
+map <C-k> <C-w>k
+map <C-j> <C-w>j
+map <C-l> <C-w>l
+
+" Save as sudo with w!!
+cmap w!! w !sudo tee % >/dev/null
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
