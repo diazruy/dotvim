@@ -36,6 +36,13 @@ map <C-k> <C-w>k
 map <C-j> <C-w>j
 map <C-l> <C-w>l
 
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+
 " Save as sudo with w!!
 cmap w!! w !sudo tee % >/dev/null
 
