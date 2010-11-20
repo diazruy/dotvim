@@ -15,6 +15,7 @@ Switch to the ~/.vim directory and fetch submodules
 Compile command-t
 
   cd bundle/command-t
+  rvm use system # Need to compile with Ruby 1.8
   rake make
 
 For the molokai color scheme

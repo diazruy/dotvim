@@ -19,3 +19,9 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "pathogen"]
+	path = pathogen
+	url = git://github.com/tpope/vim-pathogen.git
+[submodule "delimitMate"]
+	path = delimitMate
+	url = git://github.com/Raimondi/delimitMate.git
