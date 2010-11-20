@@ -70,6 +70,11 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
+" Sessions
+nmap <leader>s :SessionList<CR>
+nmap <leader>ss :SessionSave<CR>
+nmap <leader>sa :SessionSaveAs<CR>
+
 " Save as sudo with w!!
 cmap w!! w !sudo tee % >/dev/null
 
