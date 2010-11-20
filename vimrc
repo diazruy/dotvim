@@ -49,6 +49,10 @@ nmap <silent> <C-P> :NERDTreeToggle<CR>
 " ,p to show current file in the tree
 nmap <leader>p :NERDTreeFind<CR>
 
+" Ctrl-N to disable search match highlight
+" Note: C-N was the same as k (move to next line ) 
+nmap <silent> <C-N> :silent noh<CR>
+
 " ,/ to invert comment on the current line/selection
 nmap <leader>/ :call NERDComment(0, "invert")<cr>
 vmap <leader>/ :call NERDComment(0, "invert")<cr>
