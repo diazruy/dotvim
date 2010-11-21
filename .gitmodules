@@ -13,21 +13,12 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
-[submodule "snippets"]
-	path = snippets
-	url = https://github.com/scrooloose/snipmate-snippets.git
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
 [submodule "pathogen"]
 	path = pathogen
 	url = git://github.com/tpope/vim-pathogen.git
-[submodule "delimitMate"]
-	path = delimitMate
-	url = git://github.com/Raimondi/delimitMate.git
-[submodule "cucumber"]
-	path = cucumber
-	url = git://github.com/tpope/vim-cucumber.git
 [submodule "bundle/cucumber"]
 	path = bundle/cucumber
 	url = git://github.com/tpope/vim-cucumber.git
