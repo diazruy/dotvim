@@ -25,3 +25,6 @@
 [submodule "delimitMate"]
 	path = delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
+[submodule "cucumber"]
+	path = cucumber
+	url = git://github.com/tpope/vim-cucumber.git
