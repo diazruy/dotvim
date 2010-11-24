@@ -1,9 +1,14 @@
-call pathogen#runtime_append_all_bundles() 
-call pathogen#helptags()
-
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+
+" Debian turns filetype on automatically before it calls pathogen
+" causing problems with cucumber
+filetype off
+
+" Package bundling using pathogen
+call pathogen#runtime_append_all_bundles() 
+call pathogen#helptags()
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
