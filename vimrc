@@ -121,6 +121,9 @@ if has("autocmd")
     \   exe "normal! g`\"" |
     \ endif
 
+  autocmd BufNewFile,BufRead *.mxml set filetype=mxml
+  autocmd BufNewFile,BufRead *.as set filetype=actionscript
+
   augroup END
 
 else
