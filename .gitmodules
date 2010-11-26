@@ -25,3 +25,6 @@
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
+[submodule "surround"]
+	path = surround
+	url = https://github.com/tpope/vim-surround.git
