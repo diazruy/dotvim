@@ -36,10 +36,6 @@ set nowrap        " Disable text wrapping
 set wildignore=.git,*.cache,*.gif,*.png,*.jpg,*.orig,*~ " Ignore these file from listings
 set autoread      " Load file changes outside of vim
 
-" Highlight over column 80
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /%81v.\+/
-
 " Remap leader
 let mapleader=","
 
@@ -95,6 +91,7 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
@@ -123,6 +120,16 @@ if has("autocmd")
 
   autocmd BufNewFile,BufRead *.mxml set filetype=mxml
   autocmd BufNewFile,BufRead *.as set filetype=actionscript
+
+  " Change color of statusline when in insert mode
+  autocmd InsertEnter * highlight StatusLine ctermfg=2 ctermbg=2
+  autocmd InsertLeave * highlight StatusLine ctermfg=4 ctermbg=7
+
+  " Change color of statusline for active window
+  autocmd VimEnter * highlight StatusLine term=reverse ctermfg=4 ctermbg=7 gui=bold,reverse
+
+  " Highlight over column 80
+  "autocmd BufWinEnter * let w:m1=matchadd('Error', '\%>80v.\+', -1)
 
   augroup END
 
