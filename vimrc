@@ -129,7 +129,7 @@ if has("autocmd")
   autocmd VimEnter * highlight StatusLine term=reverse ctermfg=4 ctermbg=7 gui=bold,reverse
 
   " Highlight over column 80
-  "autocmd BufWinEnter * let w:m1=matchadd('Error', '\%>80v.\+', -1)
+  autocmd BufWinEnter * let w:m1=matchadd('Error', '\%>80v.\+', -1)
 
   augroup END
 
