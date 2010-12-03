@@ -131,6 +131,8 @@ if has("autocmd")
   " Highlight over column 80
   autocmd BufWinEnter * let w:m1=matchadd('Error', '\%>80v.\+', -1)
 
+
+
   augroup END
 
 else
@@ -138,6 +140,9 @@ else
   set autoindent		" always set autoindenting on
 
 endif " has("autocmd")
+
+let delimitMate_expand_space = 1
+let delimitMate_expand_cr = 1
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
