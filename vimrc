@@ -25,6 +25,8 @@ set ignorecase    " case insensitive search
 set smartcase     " case insensitive when lowe case, else case sensitive
 
 set number				" show line numbers
+set cursorline    " Highlight current row
+set laststatus=2  " Always show statusline
 
 " Tabs and indentation
 set softtabstop=2 " Set tab width to 2
@@ -130,8 +132,6 @@ if has("autocmd")
 
   " Highlight over column 80
   autocmd BufWinEnter * let w:m1=matchadd('Error', '\%>80v.\+', -1)
-
-
 
   augroup END
 
