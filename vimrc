@@ -78,13 +78,16 @@ nmap <leader>s :SessionList<CR>
 nmap <leader>ss :SessionSave<CR>
 nmap <leader>sa :SessionSaveAs<CR>
 
+" DelimitMate override of SnipMate's S-Tab
+imap <S-Tab> <Plug>delimitMateS-Tab
+
 " Save as sudo with w!!
 cmap w!! w !sudo tee % >/dev/null
 
 " In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-  set mouse=a
-endif
+"if has('mouse')
+  "set mouse=a
+"endif
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
