@@ -61,10 +61,10 @@ nmap <leader>/ :call NERDComment(0, "invert")<cr>
 vmap <leader>/ :call NERDComment(0, "invert")<cr>
 
 " Navigate splits without having to prepend with C-w
-map <C-h> <C-w>h
-map <C-k> <C-w>k
-map <C-j> <C-w>j
-map <C-l> <C-w>l
+nmap <C-h> <C-w>h
+nmap <C-k> <C-w>k
+nmap <C-j> <C-w>j
+nmap <C-l> <C-w>l
 
 " Bubble single lines
 nmap <C-Up> [e
