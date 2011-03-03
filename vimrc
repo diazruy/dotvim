@@ -84,6 +84,12 @@ imap <S-Tab> <Plug>delimitMateS-Tab
 " Save as sudo with w!!
 cmap w!! w !sudo tee % >/dev/null
 
+" Move cursor while in insert mode without using arrow keys
+imap <C-h> <Left>
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-l> <Right>
+
 " In many terminal emulators the mouse works just fine, thus enable it.
 "if has('mouse')
   "set mouse=a
