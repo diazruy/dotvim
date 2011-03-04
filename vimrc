@@ -90,6 +90,12 @@ imap <C-j> <Down>
 imap <C-k> <Up>
 imap <C-l> <Right>
 
+" Map :vimgrep to leader-f
+nmap <leader>f :vimgrep 
+
+" Map :W to save as well
+nmap :W :w
+
 " In many terminal emulators the mouse works just fine, thus enable it.
 "if has('mouse')
   "set mouse=a
