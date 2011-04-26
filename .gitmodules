@@ -31,3 +31,6 @@
 [submodule "bundle/javascript-indent"]
 	path = bundle/javascript-indent
 	url = git://github.com/pangloss/vim-javascript.git
+[submodule "bundle/jslint"]
+	path = bundle/jslint
+	url = https://github.com/hallettj/jslint.vim.git

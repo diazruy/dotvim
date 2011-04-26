@@ -148,6 +148,10 @@ if has("autocmd")
   " Highlight over column 80
   autocmd BufWinEnter * let w:m1=matchadd('Error', '\%>80v.\+', -1)
 
+  " Save/load folds
+  autocmd BufWinLeave *.* mkview
+  autocmd BufWinEnter *.* silent loadview
+
   augroup END
 
 else
