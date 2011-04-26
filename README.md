@@ -1,10 +1,10 @@
 # Installation
 
-	git clone git://github.com/diazruy/dotvim.git ~/.vim
+	  git clone git://github.com/diazruy/dotvim.git ~/.vim
 
 Create symlinks
 	
-	ln -s ~/.vim/vimrc ~/.vimrc
+  	ln -s ~/.vim/vimrc ~/.vimrc
 
 Switch to the ~/.vim directory and fetch submodules
 
@@ -24,7 +24,7 @@ Compile command-t
 
 For the molokai color scheme
 
-  sudo apt-get install ncurses-term
+    sudo apt-get install ncurses-term
 
 Add to .bashrc:
     
