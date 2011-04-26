@@ -8,17 +8,17 @@ Create symlinks
 
 Switch to the ~/.vim directory and fetch submodules
 
-	cd ~/.vim
-	git submodule init
-	git sumbodule update
+  	cd ~/.vim
+  	git submodule init
+  	git sumbodule update
 
 ## Command-T
 
 Compile command-t
 
-  cd bundle/command-t
-  rvm use system # Need to compile with Ruby 1.8
-  rake make
+    cd bundle/command-t
+    rvm use system # Need to compile with Ruby 1.8
+    rake make
 
 ## Molokai
 
@@ -34,6 +34,6 @@ Add to .bashrc:
 
 For jslint, install node.js
 
-  sudo add-apt-repository ppa:jerome-etienne/neoip 
-  sudo apt-get update 
-  sudo apt-get install nodejs -y
+    sudo add-apt-repository ppa:jerome-etienne/neoip 
+    sudo apt-get update 
+    sudo apt-get install nodejs -y
