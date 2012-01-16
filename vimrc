@@ -192,6 +192,10 @@ function s:UpdateNERDTree(...)
       end
     endif
   endif
+
+  if exists(":CommandTFlush") == 2
+    CommandTFlush
+  endif
 endfunction
 
 " Removes trailing spaces
