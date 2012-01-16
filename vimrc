@@ -7,32 +7,32 @@ set nocompatible
 filetype off
 
 " Package bundling using pathogen
-call pathogen#runtime_append_all_bundles() 
+call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-set nobackup		" do not keep a backup file, use versions instead
+set nobackup    " do not keep a backup file, use versions instead
 set noswapfile
-set history=50		" keep 50 lines of command line history
-set ruler					" show the cursor position all the time
-set showcmd				" display incomplete commands
+set history=50    " keep 50 lines of command line history
+set ruler         " show the cursor position all the time
+set showcmd       " display incomplete commands
 
 " Search
-set incsearch			" do incremental searchingA
+set incsearch     " do incremental searchingA
 set ignorecase    " case insensitive search
 set smartcase     " case insensitive when lowe case, else case sensitive
 
-set number				" show line numbers
+set number        " show line numbers
 set cursorline    " Highlight current row
 set laststatus=2  " Always show statusline
 
 " Tabs and indentation
 set softtabstop=2 " Set tab width to 2
-set shiftwidth=2	" Set tab width to 2
-set tabstop=2			" Set tab width to 2
-set expandtab			" Insert tabs as spaces
+set shiftwidth=2  " Set tab width to 2
+set tabstop=2     " Set tab width to 2
+set expandtab     " Insert tabs as spaces
 
 set nowrap        " Disable text wrapping
 set wildignore=.git,*.cache,*.gif,*.png,*.jpg,*.orig,*~ " Ignore these file from listings
@@ -40,6 +40,9 @@ set autoread      " Load file changes outside of vim
 
 " Remap leader
 let mapleader=","
+
+" Character encoding for PowerLine
+let g:Powerline_symbols="unicode"
 
 colorscheme molokai
 
@@ -53,7 +56,7 @@ nmap <silent> <C-P> :NERDTreeToggle<CR>
 nmap <leader>p :NERDTreeFind<CR>
 
 " Ctrl-N to disable search match highlight
-" Note: C-N was the same as k (move to next line ) 
+" Note: C-N was the same as k (move to next line )
 nmap <silent> <C-N> :silent noh<CR>
 
 " ,/ to invert comment on the current line/selection
@@ -73,13 +76,11 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
-" Sessions
-nmap <leader>s :SessionList<CR>
-nmap <leader>ss :SessionSave<CR>
-nmap <leader>sa :SessionSaveAs<CR>
-
 " DelimitMate override of SnipMate's S-Tab
 imap <S-Tab> <Plug>delimitMateS-Tab
+
+" Map CtrlP to Command T
+nmap <silent> <Leader>t :CtrlP<CR>
 
 " Save as sudo with w!!
 cmap w!! w !sudo tee % >/dev/null
@@ -91,7 +92,7 @@ imap <C-k> <Up>
 imap <C-l> <Right>
 
 " Map :vimgrep to leader-f
-nmap <leader>f :vimgrep 
+nmap <leader>f :vimgrep
 
 " Map :W to save as well
 nmap :W :w
@@ -152,11 +153,13 @@ if has("autocmd")
   autocmd BufWinLeave *.* mkview
   autocmd BufWinEnter *.* silent loadview
 
+  autocmd FocusGained * call s:UpdateNERDTree()
+
   augroup END
 
 else
 
-  set autoindent		" always set autoindenting on
+  set autoindent    " always set autoindenting on
 
 endif " has("autocmd")
 
@@ -168,5 +171,43 @@ let delimitMate_expand_cr = 1
 " Only define it when not defined already.
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+      \ | wincmd p | diffthis
+endif
+
+" NERDTree utility function
+function s:UpdateNERDTree(...)
+  let stay = 0
+
+  if(exists("a:1"))
+    let stay = a:1
+  end
+
+  if exists("t:NERDTreeBufName")
+    let nr = bufwinnr(t:NERDTreeBufName)
+    if nr != -1
+      exe nr . "wincmd w"
+      exe substitute(mapcheck("R"), "<CR>", "", "")
+      if !stay
+        wincmd p
+      end
+    endif
+  endif
+endfunction
+
+" Removes trailing spaces
+function TrimWhiteSpace()
+  %s/\s*$//
+  ''
+  :retab
+:endfunction
+
+set list listchars=trail:.,extends:>
+autocmd FileWritePre * :call TrimWhiteSpace()
+autocmd FileAppendPre * :call TrimWhiteSpace()
+autocmd FilterWritePre * :call TrimWhiteSpace()
+autocmd BufWritePre * :call TrimWhiteSpace()
+
+" Include local vim config
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
 endif
