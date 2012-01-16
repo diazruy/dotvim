@@ -36,13 +36,10 @@ set expandtab     " Insert tabs as spaces
 
 set nowrap        " Disable text wrapping
 set wildignore=.git,*.cache,*.gif,*.png,*.jpg,*.orig,*~ " Ignore these file from listings
-set autoread      " Load file changes outside of vim
+"set autoread      " Load file changes outside of vim
 
 " Remap leader
 let mapleader=","
-
-" Character encoding for PowerLine
-let g:Powerline_symbols="unicode"
 
 colorscheme molokai
 
@@ -81,6 +78,10 @@ imap <S-Tab> <Plug>delimitMateS-Tab
 
 " Map CtrlP to Command T
 nmap <silent> <Leader>t :CtrlP<CR>
+" Make CtrlP keep cache across sessions
+let g:ctrlp_clear_cache_on_exit = 0
+" Faster index generation using git
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
 
 " Save as sudo with w!!
 cmap w!! w !sudo tee % >/dev/null
