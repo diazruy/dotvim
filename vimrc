@@ -215,9 +215,6 @@ autocmd FileAppendPre * :call TrimWhiteSpace()
 autocmd FilterWritePre * :call TrimWhiteSpace()
 autocmd BufWritePre * :call TrimWhiteSpace()
 
-" Jump to matching end to a def
-source bundle/matchit/plugin/matchit.vim
-
 " Include local vim config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
