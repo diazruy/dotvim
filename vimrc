@@ -83,6 +83,9 @@ let g:ctrlp_clear_cache_on_exit = 0
 " Faster index generation using git
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
 
+" Tagbar
+nnoremap <Leader>rt :TagbarToggle<CR>
+
 " Save as sudo with w!!
 cmap w!! w !sudo tee % >/dev/null
 
