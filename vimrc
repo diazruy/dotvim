@@ -84,6 +84,9 @@ let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
 " Make CtrlP clear cache since it's using git-ls
 let g:ctrlp_use_caching = 0
 
+" Set JavaScript runtime for JSLint
+let $JS_CMD='node'
+
 " Tagbar
 nnoremap <Leader>rt :TagbarToggle<CR>
 
