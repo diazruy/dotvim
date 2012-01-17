@@ -78,10 +78,11 @@ imap <S-Tab> <Plug>delimitMateS-Tab
 
 " Map CtrlP to Command T
 nmap <silent> <Leader>t :CtrlP<CR>
-" Make CtrlP keep cache across sessions
-let g:ctrlp_clear_cache_on_exit = 0
+
 " Faster index generation using git
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
+" Make CtrlP clear cache since it's using git-ls
+let g:ctrlp_use_caching = 0
 
 " Tagbar
 nnoremap <Leader>rt :TagbarToggle<CR>
