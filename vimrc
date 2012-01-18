@@ -41,7 +41,7 @@ set wildignore=*.cache,*.gif,*.png,*.jpg,*.orig,*~ " Ignore these file from list
 " Remap leader
 let mapleader=","
 
-colorscheme molokai
+colorscheme solarized
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
