@@ -83,6 +83,8 @@ nmap <silent> <Leader>t :CtrlP<CR>
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
 " Make CtrlP clear cache since it's using git-ls
 let g:ctrlp_use_caching = 0
+" Root CtrlP to the directory in which vim was opened
+let g:ctrlp_working_path_mode=0
 
 " Set JavaScript runtime for JSLint
 let $JS_CMD='node'
