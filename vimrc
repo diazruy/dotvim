@@ -91,6 +91,10 @@ let g:ctrlp_working_path_mode=0
 " Set JavaScript runtime for JSLint
 let $JS_CMD='node'
 
+" Convert RSpec errors to CSV
+let @c='I"","f#h3s","$bea"'
+nmap <leader>c :1,$normal @c<CR>
+
 " Tagbar
 nnoremap <Leader>rt :TagbarToggle<CR>
 
