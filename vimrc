@@ -41,6 +41,8 @@ set wildignore=*.cache,*.gif,*.png,*.jpg,*.orig,*~ " Ignore these file from list
 " Remap leader
 let mapleader=","
 
+syntax enable
+set background=dark
 colorscheme solarized
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
@@ -48,13 +50,13 @@ colorscheme solarized
 inoremap <C-U> <C-G>u<C-U>
 
 " Ctrl-P to display Tree browser (C-P was previously mapped to k)
-nmap <silent> <C-P> :NERDTreeToggle<CR>
+nmap <leader>nt :NERDTreeToggle<CR>
 " ,p to show current file in the tree
 nmap <leader>p :NERDTreeFind<CR>
 
 " Ctrl-N to disable search match highlight
 " Note: C-N was the same as k (move to next line )
-nmap <silent> <C-N> :silent noh<CR>
+nmap <silent> <C-N> :noh<CR>
 
 " ,/ to invert comment on the current line/selection
 nmap <leader>/ :call NERDComment(0, "invert")<cr>
