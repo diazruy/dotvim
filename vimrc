@@ -10,6 +10,8 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+runtime! macros/matchit.vim
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
