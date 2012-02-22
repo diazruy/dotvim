@@ -52,7 +52,7 @@ colorscheme solarized
 inoremap <C-U> <C-G>u<C-U>
 
 " Ctrl-P to display Tree browser (C-P was previously mapped to k)
-nmap <leader>nt :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeToggle<CR>
 " ,p to show current file in the tree
 nmap <leader>p :NERDTreeFind<CR>
 
