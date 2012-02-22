@@ -145,22 +145,8 @@ if has("autocmd")
     \   exe "normal! g`\"" |
     \ endif
 
-  autocmd BufNewFile,BufRead *.mxml set filetype=mxml
-  autocmd BufNewFile,BufRead *.as set filetype=actionscript
-
-  " Change color of statusline when in insert mode
-  autocmd InsertEnter * highlight StatusLine ctermfg=2 ctermbg=2
-  autocmd InsertLeave * highlight StatusLine ctermfg=4 ctermbg=7
-
-  " Change color of statusline for active window
-  autocmd VimEnter * highlight StatusLine term=reverse ctermfg=4 ctermbg=7 gui=bold,reverse
-
   " Highlight over column 80
   autocmd BufWinEnter * let w:m1=matchadd('Error', '\%>80v.\+', -1)
-
-  " Save/load folds
-  autocmd BufWinLeave *.* mkview
-  autocmd BufWinEnter *.* silent loadview
 
   autocmd FocusGained * call s:UpdateNERDTree()
 
