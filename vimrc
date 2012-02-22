@@ -70,6 +70,10 @@ nmap <C-k> <C-w>k
 nmap <C-j> <C-w>j
 nmap <C-l> <C-w>l
 
+" Split creation
+nmap vv :vsplit<CR>
+nmap ss :split<CR>
+
 " Bubble single lines
 nmap <C-Up> [e
 nmap <C-Down> ]e
