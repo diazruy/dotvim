@@ -1,6 +1,6 @@
 [submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
+  path = bundle/nerdtree
+  url = git://github.com/scrooloose/nerdtree.git
 [submodule "bundle/nerdcommenter"]
   path = bundle/nerdcommenter
   url = https://github.com/scrooloose/nerdcommenter.git
@@ -10,9 +10,11 @@
 [submodule "bundle/snipmate"]
   path = bundle/snipmate
   url = https://github.com/msanders/snipmate.vim.git
+  ignore = untracked
 [submodule "bundle/unimpaired"]
   path = bundle/unimpaired
   url = git://github.com/tpope/vim-unimpaired.git
+  ignore = untracked
 [submodule "pathogen"]
   path = pathogen
   url = git://github.com/tpope/vim-pathogen.git
@@ -25,6 +27,7 @@
 [submodule "bundle/surround"]
   path = bundle/surround
   url = https://github.com/tpope/vim-surround.git
+  ignore = untracked
 [submodule "bundle/javascript-indent"]
   path = bundle/javascript-indent
   url = git://github.com/pangloss/vim-javascript.git
@@ -50,8 +53,9 @@
   path = bundle/solarized
   url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/bufexplorer"]
-	path = bundle/bufexplorer
-	url = https://github.com/corntrace/bufexplorer.git
+  path = bundle/bufexplorer
+  url = https://github.com/corntrace/bufexplorer.git
+  ignore = untracked
 [submodule "bundle/fugitive"]
-	path = bundle/fugitive
-	url = https://github.com/tpope/vim-fugitive.git
+  path = bundle/fugitive
+  url = https://github.com/tpope/vim-fugitive.git
