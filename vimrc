@@ -70,6 +70,15 @@ nmap <C-k> <C-w>k
 nmap <C-j> <C-w>j
 nmap <C-l> <C-w>l
 
+" Center search results
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+nnoremap <silent> g# g#zz
+nnoremap <silent> G Gzz
+
 " Split creation
 nmap vv :vsplit<CR>
 nmap ss :split<CR>
@@ -80,6 +89,10 @@ nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
+
+# Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
 
 " DelimitMate override of SnipMate's S-Tab
 imap <S-Tab> <Plug>delimitMateS-Tab
