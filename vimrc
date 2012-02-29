@@ -26,7 +26,7 @@ set incsearch     " do incremental searchingA
 set ignorecase    " case insensitive search
 set smartcase     " case insensitive when lowe case, else case sensitive
 
-set number        " show line numbers
+set rnu        " show relative line numbers
 set cursorline    " Highlight current row
 set laststatus=2  " Always show statusline
 
@@ -90,7 +90,7 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
-# Reselect visual block after indent/outdent
+" Reselect visual block after indent/outdent
 vnoremap < <gv
 vnoremap > >gv
 
