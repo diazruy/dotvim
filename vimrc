@@ -51,6 +51,10 @@ colorscheme solarized
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
+" Exit insert mode
+inoremap jk <Esc>
+inoremap kj <Esc>
+
 " Ctrl-P to display Tree browser (C-P was previously mapped to k)
 nmap <leader>n :NERDTreeToggle<CR>
 " ,p to show current file in the tree
@@ -80,15 +84,15 @@ nnoremap <silent> g# g#zz
 nnoremap <silent> G Gzz
 
 " Split creation
-nmap vv :vsplit<CR>
-nmap ss :split<CR>
+nnoremap vv :vsplit<CR>
+nnoremap ss :split<CR>
 
 " Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
+nnoremap <C-Up> [e
+nnoremap <C-Down> ]e
 " Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+vnoremap <C-Up> [egv
+vnoremap <C-Down> ]egv
 
 " Reselect visual block after indent/outdent
 vnoremap < <gv
@@ -96,9 +100,6 @@ vnoremap > >gv
 
 " DelimitMate override of SnipMate's S-Tab
 imap <S-Tab> <Plug>delimitMateS-Tab
-
-" Map CtrlP to Command T
-nmap <silent> <Leader>t :CtrlP<CR>
 
 " Set JavaScript runtime for JSLint
 let $JS_CMD='node'
@@ -229,3 +230,6 @@ autocmd BufWritePre * :call TrimWhiteSpace()
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+" Include Gary Bernhardt's testing shortcuts
+source ~/.vim/testing
