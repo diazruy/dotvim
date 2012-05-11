@@ -235,5 +235,10 @@ if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
 
+"Include project vim config
+if filereadable(expand("./.vimrc.custom"))
+  source ./.vimrc.custom
+endif
+
 " Include Gary Bernhardt's testing shortcuts
 source ~/.vim/testing
