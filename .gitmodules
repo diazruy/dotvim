@@ -65,3 +65,6 @@
 [submodule "bundle/coffee-script"]
 	path = bundle/coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/zencoding"]
+	path = bundle/zencoding
+	url = http://github.com/mattn/zencoding-vim.git

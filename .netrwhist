@@ -1,8 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/ruy/flex4/frameworks'
-let g:netrw_dirhist_2='/home/ruy/melomel-examples/cuke-spark'
-let g:netrw_dirhist_3='/home/ruy/projects/ultimate'
-let g:netrw_dirhist_4='/home/ruy/projects/sencha-touch-2.0.1'
-let g:netrw_dirhist_5='/home/ruy/projects/splitsee5'
-let g:netrw_dirhist_6='/home/ruy/projects/splitsee4'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/ruy/projects/splitsee4'
