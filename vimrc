@@ -165,9 +165,11 @@ if has("autocmd")
     \ endif
 
   autocmd BufNewFile,BufRead *.thor set filetype=ruby
+  autocmd BufNewFile,BufRead *.js.hbs set filetype=html
   autocmd BufNewFile,BufRead Guardfile set filetype=ruby
   autocmd BufNewFile,BufRead Gemfile set filetype=ruby
   autocmd BufNewFile,BufRead Rakefile set filetype=ruby
+  autocmd BufNewFile,BufRead *.scss set filetype=sass
 
   " Highlight over column 80
   autocmd BufWinEnter * let w:m1=matchadd('Error', '\%>80v.\+', -1)
