@@ -59,6 +59,8 @@ inoremap kj <Esc>
 nmap <leader>n :NERDTreeToggle<CR>
 " ,p to show current file in the tree
 nmap <leader>p :NERDTreeFind<CR>
+" Close NERDTree when opening a file
+let NERDTreeQuitOnOpen=1
 
 " Ctrl-N to disable search match highlight
 " Note: C-N was the same as k (move to next line )
@@ -101,6 +103,9 @@ vnoremap > >gv
 " DelimitMate override of SnipMate's S-Tab
 imap <S-Tab> <Plug>delimitMateS-Tab
 
+" Map Ctrl-S to save
+noremap <silent> <C-S> <Esc>:Update<CR>
+
 " Set JavaScript runtime for JSLint
 let $JS_CMD='node'
 
@@ -124,11 +129,6 @@ nmap :W :w
 
 " Show Git diff in window split when committing
 autocmd FileType gitcommit DiffGitCached | wincmd p
-
-"In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-  set mouse=a
-endif
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
