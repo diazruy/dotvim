@@ -51,10 +51,6 @@ colorscheme solarized
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
-" Exit insert mode
-inoremap jk <Esc>
-inoremap kj <Esc>
-
 " Ctrl-P to display Tree browser (C-P was previously mapped to k)
 nmap <leader>n :NERDTreeToggle<CR>
 " ,p to show current file in the tree
@@ -107,6 +103,10 @@ imap <S-Tab> <Plug>delimitMateS-Tab
 
 " Map Ctrl-S to save
 noremap <silent> <C-S> <Esc>:Update<CR>
+
+" Copy/Paste to system clipboard
+vmap <leader>c "+yv"zy`>
+nmap <leader>v "+p
 
 " Set JavaScript runtime for JSLint
 let $JS_CMD='node'
@@ -233,9 +233,6 @@ function <SID>TrimWhiteSpace()
 endfunction
 
 set list listchars=trail:.,extends:>
-autocmd FileWritePre * :call <SID>TrimWhiteSpace()
-autocmd FileAppendPre * :call <SID>TrimWhiteSpace()
-autocmd FilterWritePre * :call <SID>TrimWhiteSpace()
 autocmd BufWritePre * :call <SID>TrimWhiteSpace()
 
 " Include local vim config
