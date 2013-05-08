@@ -88,6 +88,8 @@ nnoremap <silent> G Gzz
 " Split creation
 nnoremap vv :vsplit<CR>
 nnoremap ss :split<CR>
+set splitbelow
+set splitright
 
 " Bubble single lines
 nnoremap <C-Up> [e
