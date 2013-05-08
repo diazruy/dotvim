@@ -220,17 +220,21 @@ function s:UpdateNERDTree(...)
 endfunction
 
 " Removes trailing spaces
-function TrimWhiteSpace()
-  %s/\s*$//
-  ''
+function <SID>TrimWhiteSpace()
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
   :retab
-:endfunction
+  let @/=_s
+  call cursor(l, c)
+endfunction
 
 set list listchars=trail:.,extends:>
-autocmd FileWritePre * :call TrimWhiteSpace()
-autocmd FileAppendPre * :call TrimWhiteSpace()
-autocmd FilterWritePre * :call TrimWhiteSpace()
-autocmd BufWritePre * :call TrimWhiteSpace()
+autocmd FileWritePre * :call <SID>TrimWhiteSpace()
+autocmd FileAppendPre * :call <SID>TrimWhiteSpace()
+autocmd FilterWritePre * :call <SID>TrimWhiteSpace()
+autocmd BufWritePre * :call <SID>TrimWhiteSpace()
 
 " Include local vim config
 if filereadable(expand("~/.vimrc.local"))
