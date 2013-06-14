@@ -80,3 +80,9 @@
 [submodule "bundle/visual-star-search"]
 	path = bundle/visual-star-search
 	url = git://github.com/nelstrom/vim-visual-star-search.git
+[submodule "bundle/handlebars"]
+	path = bundle/handlebars
+	url = git://github.com/nono/vim-handlebars.git
+[submodule "bundle/xmpfilter"]
+	path = bundle/xmpfilter
+	url = git@github.com:t9md/vim-ruby-xmpfilter.git

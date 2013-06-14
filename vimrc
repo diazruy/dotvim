@@ -129,6 +129,15 @@ nmap <leader>f :vimgrep
 " Map :W to save as well
 nmap :W :w
 
+" Xmpfilter to evaluate Ruby inline
+nmap <buffer> <F5> <Plug>(xmpfilter-run)
+xmap <buffer> <F5> <Plug>(xmpfilter-run)
+imap <buffer> <F5> <Plug>(xmpfilter-run)
+
+nmap <buffer> <F4> <Plug>(xmpfilter-mark)
+xmap <buffer> <F4> <Plug>(xmpfilter-mark)
+imap <buffer> <F4> <Plug>(xmpfilter-mark)
+
 " Show Git diff in window split when committing
 autocmd FileType gitcommit DiffGitCached | wincmd p
 
