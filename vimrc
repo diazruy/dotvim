@@ -87,6 +87,10 @@ nnoremap ss :split<CR>
 set splitbelow
 set splitright
 
+" Navigate between tabs
+nmap <Leader>[ :tabp<CR>
+nmap <Leader>] :tabn<CR>
+
 " Bubble single lines
 nnoremap <C-Up> [e
 nnoremap <C-Down> ]e
@@ -181,9 +185,6 @@ if has("autocmd")
   autocmd BufNewFile,BufRead Gemfile set filetype=ruby
   autocmd BufNewFile,BufRead Rakefile set filetype=ruby
   autocmd BufNewFile,BufRead *.scss set filetype=sass
-
-  " Highlight over column 80
-  autocmd BufWinEnter * let w:m1=matchadd('Error', '\%>80v.\+', -1)
 
   autocmd FocusGained * call s:UpdateNERDTree()
 
