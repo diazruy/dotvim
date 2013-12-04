@@ -37,7 +37,7 @@ set tabstop=2     " Set tab width to 2
 set expandtab     " Insert tabs as spaces
 
 set nowrap        " Disable text wrapping
-set wildignore=*.cache,*.gif,*.png,*.jpg,*.orig,*~ " Ignore these file from listings
+set wildignore=*.cache,*.gif,*.png,*.jpg,*.orig,*~,*.scssc " Ignore these file from listings
 "set autoread      " Load file changes outside of vim
 
 " Remap leader
