@@ -62,9 +62,6 @@
 [submodule "bundle/coffee-script"]
   path = bundle/coffee-script
   url = git://github.com/kchmck/vim-coffee-script.git
-[submodule "bundle/zencoding"]
-  path = bundle/zencoding
-  url = http://github.com/mattn/zencoding-vim.git
 [submodule "bundle/vimux"]
   path = bundle/vimux
   url = git://github.com/benmills/vimux.git
@@ -75,11 +72,11 @@
   path = bundle/greplace
   url = git://github.com/vim-scripts/greplace.vim.git
 [submodule "bundle/visual-star-search"]
-	path = bundle/visual-star-search
-	url = git://github.com/nelstrom/vim-visual-star-search.git
+  path = bundle/visual-star-search
+  url = git://github.com/nelstrom/vim-visual-star-search.git
 [submodule "bundle/handlebars"]
-	path = bundle/handlebars
-	url = git://github.com/nono/vim-handlebars.git
+  path = bundle/handlebars
+  url = git://github.com/nono/vim-handlebars.git
 [submodule "bundle/xmpfilter"]
-	path = bundle/xmpfilter
-	url = git@github.com:t9md/vim-ruby-xmpfilter.git
+  path = bundle/xmpfilter
+  url = git@github.com:t9md/vim-ruby-xmpfilter.git

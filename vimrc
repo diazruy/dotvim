@@ -185,6 +185,7 @@ if has("autocmd")
   autocmd BufNewFile,BufRead Gemfile set filetype=ruby
   autocmd BufNewFile,BufRead Rakefile set filetype=ruby
   autocmd BufNewFile,BufRead *.scss set filetype=sass
+  autocmd BufNewFile,BufRead *.md set filetype=markdown
 
   autocmd FocusGained * call s:UpdateNERDTree()
 
