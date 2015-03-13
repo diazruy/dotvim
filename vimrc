@@ -27,6 +27,7 @@ set ignorecase    " case insensitive search
 set smartcase     " case insensitive when lowe case, else case sensitive
 
 set rnu        " show relative line numbers
+set nu         " show current line number instead of 0
 set cursorline    " Highlight current row
 set laststatus=2  " Always show statusline
 
@@ -37,9 +38,10 @@ set tabstop=2     " Set tab width to 2
 set expandtab     " Insert tabs as spaces
 
 set nowrap        " Disable text wrapping
-set wildignore=*.cache,*.gif,*.png,*.jpg,*.orig,*~,*.scssc " Ignore these file from listings
+set wildignore=*/log/*,*.cache,*.gif,*.png,*.jpg,*.orig,*~,*.scssc " Ignore these file from listings
 "set autoread      " Load file changes outside of vim
 
+let g:localvimrc_whitelist='/home/ruy/projects/\(rewportal\).*'
 " Remap leader
 let mapleader=","
 
@@ -130,8 +132,10 @@ imap <C-l> <Right>
 " Map :vimgrep to leader-f
 nmap <leader>f :vimgrep
 
-" Map :W to save as well
+" Map upper case to lower case
 nmap :W :w
+nmap :E :e
+nmap :Q :q
 
 " Xmpfilter to evaluate Ruby inline
 nmap <buffer> <F5> <Plug>(xmpfilter-run)
@@ -186,6 +190,7 @@ if has("autocmd")
   autocmd BufNewFile,BufRead Rakefile set filetype=ruby
   autocmd BufNewFile,BufRead *.scss set filetype=sass
   autocmd BufNewFile,BufRead *.md set filetype=markdown
+  autocmd BufNewFile,BufRead *.hjs set filetype=handlebars
 
   autocmd FocusGained * call s:UpdateNERDTree()
 

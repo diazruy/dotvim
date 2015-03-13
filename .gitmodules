@@ -80,3 +80,6 @@
 [submodule "bundle/xmpfilter"]
   path = bundle/xmpfilter
   url = git@github.com:t9md/vim-ruby-xmpfilter.git
+[submodule "bundle/localvimrc"]
+	path = bundle/localvimrc
+	url = git@github.com:embear/vim-localvimrc.git
