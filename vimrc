@@ -188,6 +188,7 @@ if has("autocmd")
   autocmd BufNewFile,BufRead Guardfile set filetype=ruby
   autocmd BufNewFile,BufRead Gemfile set filetype=ruby
   autocmd BufNewFile,BufRead Rakefile set filetype=ruby
+  autocmd BufNewFile,BufRead *.arb set filetype=ruby
   autocmd BufNewFile,BufRead *.scss set filetype=sass
   autocmd BufNewFile,BufRead *.md set filetype=markdown
   autocmd BufNewFile,BufRead *.hjs set filetype=handlebars
