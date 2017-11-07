@@ -38,7 +38,7 @@ set tabstop=2     " Set tab width to 2
 set expandtab     " Insert tabs as spaces
 
 set nowrap        " Disable text wrapping
-set wildignore=*/log/*,*.cache,*.gif,*.png,*.jpg,*.orig,*~,*.scssc " Ignore these file from listings
+set wildignore=*/log/*,*.cache,*.gif,*.png,*.jpg,*.orig,*~,*.scssc.*/tmp/* " Ignore these file from listings
 "set autoread      " Load file changes outside of vim
 
 let g:localvimrc_whitelist='/home/ruy/projects/\(rewportal\).*'
