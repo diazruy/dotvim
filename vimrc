@@ -41,7 +41,7 @@ set nowrap        " Disable text wrapping
 set wildignore=*/log/*,*.cache,*.gif,*.png,*.jpg,*.orig,*~,*.scssc,*/tmp/*,*/node_modules/*,*/bower_components/*,*/dist/* " Ignore these file from listings
 "set autoread      " Load file changes outside of vim
 
-let g:localvimrc_whitelist='/home/ruy/projects/\(rewportal\).*'
+let g:localvimrc_whitelist='/\(home/ruy\|home_ext\)/projects/\(rewportal\|habitstack\|bigwins\).*'
 " Remap leader
 let mapleader=","
 
