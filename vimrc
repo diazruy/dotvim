@@ -2,13 +2,39 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" Debian turns filetype on automatically before it calls pathogen
-" causing problems with cucumber
-filetype off
+" https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" Package bundling using pathogen
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+" vim-plug Plugin setup
+call plug#begin()
+
+" FileSystem explorer
+Plug 'preservim/nerdtree'
+"Comment functions so powerful—no comment necessary
+Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-rails', {'for': 'ruby'}
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
+Plug 'Raimondi/delimitMate'
+Plug 'pangloss/vim-javascript'
+" Full path fuzzy finder
+Plug 'ctrlpvim/ctrlp.vim'
+" better-looking, more functional vim statuslines
+Plug 'Lokaltog/vim-powerline'
+Plug 'mileszs/ack.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'corntrace/bufexplorer'
+Plug 'vim-scripts/Rename2'
+Plug 'kchmck/vim-coffee-script'
+
+call plug#end()
 
 runtime! macros/matchit.vim
 
@@ -60,6 +86,15 @@ nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>p :NERDTreeFind<CR>
 " Close NERDTree when opening a file
 let NERDTreeQuitOnOpen=1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims=1
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
 
 " Ctrl-N to disable search match highlight
 " Note: C-N was the same as k (move to next line )
