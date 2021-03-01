@@ -12,6 +12,8 @@ endif
 " vim-plug Plugin setup
 call plug#begin()
 
+" LustyExplorer/LustyJuggler: Buffer and Filesystem explorer/toggler
+Plug 'sjbach/lusty'
 " FileSystem explorer
 Plug 'preservim/nerdtree'
 "Comment functions so powerful—no comment necessary
@@ -300,3 +302,6 @@ endif
 
 " Include Gary Bernhardt's testing shortcuts
 source ~/.vim/testing
+
+" LustyExplorer / Coc
+set hidden
