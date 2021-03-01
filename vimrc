@@ -35,6 +35,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'corntrace/bufexplorer'
 Plug 'vim-scripts/Rename2'
 Plug 'kchmck/vim-coffee-script'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'jparise/vim-graphql'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Conquer of Completion
 let g:coc_global_extensions = [
   \ 'coc-tsserver'
