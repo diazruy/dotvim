@@ -12,31 +12,24 @@ endif
 " vim-plug Plugin setup
 call plug#begin()
 
-" LustyExplorer/LustyJuggler: Buffer and Filesystem explorer/toggler
-Plug 'sjbach/lusty'
-" FileSystem explorer
-Plug 'preservim/nerdtree'
-"Comment functions so powerful—no comment necessary
-Plug 'preservim/nerdcommenter'
+Plug 'sjbach/lusty' " LustyExplorer/LustyJuggler: Buffer and Filesystem explorer/toggler
+Plug 'preservim/nerdtree' " FileSystem explorer
+Plug 'preservim/nerdcommenter' "Comment functions so powerful—no comment necessary
 Plug 'tpope/vim-rails', {'for': 'ruby'}
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-endwise'
-Plug 'Raimondi/delimitMate'
-Plug 'pangloss/vim-javascript'
-" Full path fuzzy finder
-Plug 'ctrlpvim/ctrlp.vim'
-" better-looking, more functional vim statuslines
-Plug 'Lokaltog/vim-powerline'
-Plug 'mileszs/ack.vim'
-Plug 'altercation/vim-colors-solarized'
-Plug 'corntrace/bufexplorer'
-Plug 'vim-scripts/Rename2'
-Plug 'kchmck/vim-coffee-script'
-Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'jparise/vim-graphql'
+Plug 'tpope/vim-unimpaired' " Pairs of handy bracket mappings
+Plug 'tpope/vim-surround' " mappings to easily delete, change and add such surroundings in pairs.
+Plug 'tpope/vim-fugitive' " Git
+Plug 'tpope/vim-endwise' " end certain structures automatically (if, do, def ...)
+Plug 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc
+Plug 'pangloss/vim-javascript' " syntax highlighting and improved indentation
+Plug 'ctrlpvim/ctrlp.vim' " Full path fuzzy finder
+Plug 'Lokaltog/vim-powerline' " better-looking, more functional vim statuslines
+Plug 'mileszs/ack.vim' " Ack search
+Plug 'altercation/vim-colors-solarized' " Solarized colorscheme (enable Solarized palette on terminal first)
+Plug 'corntrace/bufexplorer' " Buffer explorer (might not need anymore with LustyExplorer)
+Plug 'kchmck/vim-coffee-script' "  syntax, indenting, compiling, and more.
+Plug 'MaxMEllon/vim-jsx-pretty' " React syntax highlighting and indenting
+Plug 'jparise/vim-graphql' " GraphQL file detection, syntax highlighting, and indentation.
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Conquer of Completion
 let g:coc_global_extensions = [
   \ 'coc-tsserver'
@@ -69,9 +62,8 @@ set updatetime=300
 " diagnostics appear/become resolved.
 set signcolumn=number
 
-
 " Search
-set incsearch     " do incremental searchingA
+set incsearch     " do incremental searching
 set ignorecase    " case insensitive search
 set smartcase     " case insensitive when lowe case, else case sensitive
 
@@ -96,8 +88,8 @@ let mapleader=","
 
 syntax enable
 set background=dark
-" colorscheme solarized
-colorscheme molokai
+colorscheme solarized
+" colorscheme molokai
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
